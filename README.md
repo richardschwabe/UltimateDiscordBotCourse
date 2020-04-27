@@ -58,8 +58,62 @@ This Discord Bot uses [Discordpy](https://github.com/Rapptz/discord.py) and its 
 - invite
 - poke
 
+# Local Development Instructions
+
+To start and deploy the bot locally the following steps are required:
+
+```
+pip install -r requirements.txt
+```
+
+Then create the following files:
+
+```
+.env
+.env.debug
+```
+
+The `.env.debug` file is only parsed when you set an environment variable `DEBUG`. If it is not present it will revert to `.env`
+
+Contents required for the `.env` or `.env.debug` file:
+
+```
+DISCORD_BOT_TOKEN=YOUR_SUBER_SECRET_DISCORD_TOKEN
+```
+
+If you want to make use of the reddit commands you also need to register an App/Bot on reddit.com and add the following lines to the .env files:
+
+```
+REDDIT_APP_ID=YOU_APP_ID
+REDDIT_APP_SECRET=SUPER_SECRET_REDDIT_APP_SECRET
+```
+
+If you want to use nodemon to automatically restart the bot while developing create a nodemon config as well:
+
+```
+# ./nodemon.json:
+{
+  "env": {
+    "DEBUG": "true"
+  }
+}
+
+```
+
+otherwise you can call the bot via:
+
+```
+export DEBUG=True python main.py
+```
+
+**_Note: export is required when you want to create the environment variable for the current shell AND all processes started from the current shell!_**
+
 # Note
 
 - The code is always up to date with the latest episode on the Youtube Channel
 - No PR
 - There will be more to come, once the tutorial series has finished!! So do come back and stay up to date
+
+```
+
+```
