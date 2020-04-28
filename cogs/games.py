@@ -5,6 +5,14 @@ from rps.model import RPS
 from rps.parser import RockPaperScissorParser
 from rps.controller import RPSGame
 
+from hangman.controller import HangmanGame
+
+hangman_games = {}
+
+word = "discord"
+
+user_guesses = list()
+
 
 class Games(commands.Cog):
     def __init__(self, bot):
@@ -33,6 +41,28 @@ class Games(commands.Cog):
             message = "You lose: %s vs %s" % (user_choice, bot_choice)
 
         await ctx.send(message)
+
+    @commands.command()
+    @commands.dm_only()
+    async def hm(self, ctx, guess: str):
+        player_id = ctx.author.id
+        hangman_instance = HangmanGame()
+        game_over, won = hangman_instance.run(player_id, guess)
+
+        if game_over:
+            game_over_message = "You did not win"
+            if won:
+                game_over_message = "Congrats you won!!"
+
+            game_over_message = game_over_message + \
+                " The word was %s" % hangman_instance.get_secret_word()
+
+            await hangman_instance.reset(player_id)
+            await ctx.send(game_over_message)
+
+        else:
+            await ctx.send("Progress: %s" % hangman_instance.get_progress_string())
+            await ctx.send("Guess so far: %s" % hangman_instance.get_guess_string())
 
 
 def setup(bot):
