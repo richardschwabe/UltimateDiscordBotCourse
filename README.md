@@ -34,6 +34,9 @@ This Discord Bot uses [Discordpy](https://github.com/Rapptz/discord.py) and its 
 ## Games
 
 - Rock Paper Scissors
+- Hangman Single Player DM game
+- Guess a word Multiplayer Temporary Text Channel game
+- Lottery Database based multiplayer game with schedule
 
 ## Images
 
