@@ -14,7 +14,7 @@ python-dotenv==0.13.0
 requests==2.23.0
 six==1.14.0
 update-checker==0.16
-urllib3==1.25.9
+urllib3==1.26.5
 websocket-client==0.57.0
 websockets==8.1
 yarl==1.4.2
