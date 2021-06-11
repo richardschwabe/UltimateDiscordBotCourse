@@ -16,5 +16,5 @@ six==1.14.0
 update-checker==0.16
 urllib3==1.25.9
 websocket-client==0.57.0
-websockets==8.1
+websockets==9.1
 yarl==1.4.2
