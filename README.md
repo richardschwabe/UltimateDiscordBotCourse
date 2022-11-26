@@ -1,6 +1,12 @@
 # :bangbang: Attention :bangbang:
+THIS REPO IS OUTDATED AND NO LONGER MAINTAINED
 
-This code is the result of our Youtube ULTIMATE DISCORD BOT course and should not be used in production like this. The code is purely for training purposes.
+INSTEAD:
+A new discord bot series was just released. It makes use of discordpy2. You can find it here:
+https://github.com/richardschwabe/discord-bot-2022-course
+
+The youtube playlist that covers the code is here:
+https://www.youtube.com/playlist?list=PLESMQx4LeD3N0-KKPPDaToZhBsom2E_Ju
 
 # How to use this code
 
